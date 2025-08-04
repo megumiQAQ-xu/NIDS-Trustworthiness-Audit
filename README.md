@@ -6,13 +6,13 @@ n XAI-driven audit of shortcut learning in Network Intrusion Detection Systems.
 
 This repository contains the complete experimental code and dissertation for the project titled "An XAI-Driven Audit of Shortcut Learning in Network Intrusion Detection Systems."
 
-##  (Abstract)
+##  Abstract
 
 This project addresses a critical trustworthiness gap in Machine Learning-based Network Intrusion Detection Systems (ML-NIDS). While many ML-NIDS report near-perfect accuracy on benchmark datasets like CIC-IDS2017, this performance is often predicated on "shortcut learning"—exploiting dataset-specific artifacts rather than learning generalizable attack patterns. The deployment of such models creates a false sense of security.
 
 This research first replicates these state-of-the-art results by training high-performance classifiers (XGBoost and RandomForest) on the CIC-IDS2017 dataset. Subsequently, it subjects the models to a rigorous post-hoc audit using SHAP (SHapley Additive exPlanations) to prove that their success is indeed based on shortcuts. Finally, the project demonstrates the fragility of these models through adversarial testing and explores potential remediation by retraining on a sanitized feature set.
 
-##  (Key Features)
+##  Key Features
 
 - **End-to-End Pipeline**: From data preprocessing and EDA to advanced model analysis in a single Google Colab notebook.
 - **Shortcut Learning Demonstration**: Empirically shows how high-performance models achieve near-perfect scores by exploiting dataset flaws.
@@ -20,7 +20,7 @@ This research first replicates these state-of-the-art results by training high-p
 - **Robustness Testing**: Includes adversarial tests to prove the fragility of the model and feature ablation experiments to explore remediation.
 - **Kaggle Best Practices**: Incorporates high-quality coding practices, including feature selection and clear visualizations.
 
-##  (Methodology)
+##  Methodology
 
 The experiment follows a structured, multi-stage pipeline:
 
@@ -32,24 +32,24 @@ The experiment follows a structured, multi-stage pipeline:
 6.  **XAI Analysis (SHAP)**: The internal logic of the trained XGBoost model is audited to identify reliance on shortcut features.
 7.  **Adversarial & Ablation Tests**: The model's fragility is proven, and a potential remediation path is explored.
 
-##  (How to Run the Experiment)
+##  How to Run the Experiment
 
 This project is designed to be run in **Google Colab**.
 
-1.  ** (Get the Data)**
+1.  ** Get the Data**
     * Download the dataset from the official source: [CIC-IDS2017 Dataset](https://www.unb.ca/cic/datasets/ids-2017.html).
     * You need the **`MachineLearningCSV.zip`** file.
     * Unzip the file and upload the entire folder (containing all 8 `.csv` files) to your Google Drive.
 
-2.  **(Setup the Notebook)**
+2.  **Setup the Notebook**
     * Open the `.ipynb` file from this repository in Google Colab.
     * In **Cell 4**, update the `path_to_csv_folder` variable to point to the correct location of your dataset in Google Drive.
     * In the Colab menu, go to **Runtime -> Change runtime type** and select **T4 GPU** to enable GPU acceleration for XGBoost.
 
-3.  **(Run the Experiment)**
+3.  **Run the Experiment**
     * Run the cells sequentially from top to bottom.
 
-##  (Key Findings)
+##  Key Findings
 
 The experiment successfully confirmed the dissertation's core hypothesis:
 
