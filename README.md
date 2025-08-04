@@ -36,7 +36,7 @@ The experiment follows a structured, multi-stage pipeline:
 
 This project is designed to be run in **Google Colab**.
 
-1.  ** Get the Data**
+1.  **Get the Data**
     * Download the dataset from the official source: [CIC-IDS2017 Dataset](https://www.unb.ca/cic/datasets/ids-2017.html).
     * You need the **`MachineLearningCSV.zip`** file.
     * Unzip the file and upload the entire folder (containing all 8 `.csv` files) to your Google Drive.
